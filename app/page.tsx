@@ -263,16 +263,16 @@ export default function Example() {
       <div>
         <div className="carousel w-full">
           <div id="item1" className="carousel-item w-full">
-            <img src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp" className="w-full" />
+            <img src="/perfume.jpg" className="w-full" />
           </div>
           <div id="item2" className="carousel-item w-full">
-            <img src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp" className="w-full" />
+            <img src="/drone1.jpg" className="w-full" />
           </div>
           <div id="item3" className="carousel-item w-full">
-            <img src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp" className="w-full" />
+            <img src="/drone2.jpg" className="w-full" />
           </div>
           <div id="item4" className="carousel-item w-full">
-            <img src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp" className="w-full" />
+            <img src="/about.png" className="w-full" />
           </div>
         </div>
         <div className="flex w-full justify-center gap-2 py-2">
@@ -327,22 +327,19 @@ export default function Example() {
         </div>
       </div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <ul
-          role="list"
-          className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8"
-        >
-          {Array.from({ length: 6 }).map((_, index) => (
-            <li className="">
+        <ul role="list" className="grid grid-cols-2 gap-x-4 gap-y-8 lg:grid-cols-3 xl:gap-x-8">
+          {['/007.jpg', '/345.jpg', '/346.jpg', '/347.jpg', '/348.jpg', '/349.jpg'].map((path, index) => (
+            <li key={index} className="">
               <div className="card w-96 bg-base-100 shadow-xl">
                 <figure>
-                  <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+                  <img src={path} alt="Glass" className="scale-125" />
                 </figure>
                 <div className="card-body">
                   <h2 className="card-title">
-                    Shoes!
+                    Glass!
                     <div className="badge badge-secondary">NEW</div>
                   </h2>
-                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                  {/* <p>If a dog chews shoes whose shoes does he choose?</p> */}
                   <div className="card-actions justify-end">
                     <div className="badge badge-outline">Fashion</div>
                     <div className="badge badge-outline">Products</div>
