@@ -238,16 +238,19 @@ export default function Example() {
       <div>
         <div className="carousel w-full">
           <div id="item1" className="carousel-item w-full">
-            <img src="/door.jpg" className="w-full" />
+            <img src="/banner-1.jpg" className="w-full" />
           </div>
           <div id="item2" className="carousel-item w-full">
-            <img src="/drone1.jpg" className="w-full" />
+            <img src="/banner-2.jpg" className="w-full" />
           </div>
           <div id="item3" className="carousel-item w-full">
-            <img src="/drone2.jpg" className="w-full" />
+            <img src="/banner-3.jpg" className="w-full" />
           </div>
           <div id="item4" className="carousel-item w-full">
-            <img src="/about.png" className="w-full" />
+            <img src="/banner-4.jpg" className="w-full" />
+          </div>
+          <div id="item5" className="carousel-item w-full">
+            <img src="/banner-5.jpg" className="w-full" />
           </div>
         </div>
         <div className="flex w-full justify-center gap-2 py-2">
@@ -262,6 +265,9 @@ export default function Example() {
           </a>
           <a href="#item4" className="btn btn-xs">
             4
+          </a>
+          <a href="#item5" className="btn btn-xs">
+            5
           </a>
         </div>
       </div>
