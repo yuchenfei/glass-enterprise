@@ -14,7 +14,7 @@ export default function Banner() {
       <div className="carousel w-full">
         {banners.map((banner) => (
           <div id={`banner-${banner.index}`} className="carousel-item w-full" key={banner.index}>
-            <Image className="w-full" src={banner.src} alt="Banner" key={banner.index} />
+            <Image key={banner.index} src={banner.src} alt="Banner" height={864} width={2160} />
           </div>
         ))}
       </div>

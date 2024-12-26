@@ -34,25 +34,25 @@ export default function HomePage() {
       <div>
         <div className="carousel rounded-box">
           <div className="carousel-item">
-            <Image className="w-80" src="/007.jpg" alt="Burger" />
+            <Image className="w-80" src="/007.jpg" alt="Burger" height={500} width={500} />
           </div>
           <div className="carousel-item">
-            <Image className="w-80" src="/351.jpg" alt="Burger" />
+            <Image className="w-80" src="/351.jpg" alt="Burger" height={500} width={500} />
           </div>
           <div className="carousel-item">
-            <Image className="w-80" src="/350.jpg" alt="Burger" />
+            <Image className="w-80" src="/350.jpg" alt="Burger" height={500} width={500} />
           </div>
           <div className="carousel-item">
-            <Image className="w-80" src="/349.jpg" alt="Burger" />
+            <Image className="w-80" src="/349.jpg" alt="Burger" height={500} width={500} />
           </div>
           <div className="carousel-item">
-            <Image className="w-80" src="/348.jpg" alt="Burger" />
+            <Image className="w-80" src="/348.jpg" alt="Burger" height={500} width={500} />
           </div>
           <div className="carousel-item">
-            <Image className="w-80" src="/347.jpg" alt="Burger" />
+            <Image className="w-80" src="/347.jpg" alt="Burger" height={500} width={500} />
           </div>
           <div className="carousel-item">
-            <Image className="w-80" src="/346.jpg" alt="Burger" />
+            <Image className="w-80" src="/346.jpg" alt="Burger" height={500} width={500} />
           </div>
         </div>
       </div>
@@ -99,7 +99,7 @@ export default function HomePage() {
               <li className="" key={index}>
                 <div className="card w-96 bg-base-100 shadow-xl">
                   <figure>
-                    <Image className="scale-125" src={path} alt="Glass" />
+                    <Image className="scale-125" src={path} alt="Glass" height={500} width={500} />
                   </figure>
                   <div className="card-body">
                     <h2 className="card-title">

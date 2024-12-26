@@ -77,6 +77,8 @@ const Header = () => {
               className="h-8 w-auto"
               src="https://tailwindui.starxg.com/plus/img/logos/mark.svg?color=indigo&shade=600"
               alt=""
+              height={32}
+              width={32}
             />
           </a>
         </div>
@@ -193,8 +195,8 @@ const Header = () => {
                       <DisclosureButton
                         className="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
                         href={item.href}
-                        as="a"
                         key={item.name}
+                        as="a"
                       >
                         {item.name}
                       </DisclosureButton>

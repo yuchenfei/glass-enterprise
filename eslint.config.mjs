@@ -46,7 +46,7 @@ const eslintConfig = [
             top: ['^class$', '^id$', '^name$'],
             class: ['^className$'],
             data: ['^data-.+'],
-            unique: ['^src$', '^for$', '^type$', '^href$', '^value$'],
+            unique: ['^src$', '^for$', '^type$', '^href$', '^value$', '^key$'],
             a11y: ['^title$', '^alt$', '^role$', '^aria-.+'],
             callback: '^on.+',
           },
