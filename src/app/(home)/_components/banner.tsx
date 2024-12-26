@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const banners = [
   { index: 1, src: '/banner-1.jpg' },
   { index: 2, src: '/banner-2.jpg' },
@@ -12,7 +14,7 @@ export default function Banner() {
       <div className="carousel w-full">
         {banners.map((banner) => (
           <div id={`banner-${banner.index}`} className="carousel-item w-full" key={banner.index}>
-            <img className="w-full" src={banner.src} key={banner.index} />
+            <Image className="w-full" src={banner.src} alt="Banner" key={banner.index} />
           </div>
         ))}
       </div>
