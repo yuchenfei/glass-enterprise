@@ -2,9 +2,10 @@ import '@/styles/globals.css'
 
 import type { Metadata } from 'next'
 
-import Footer from '@/components/footer'
-import Header from '@/components/header'
 import { geistMono, geistSans } from '@/styles/fonts'
+
+import Footer from './_components/footer'
+import Header from './_components/header'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
