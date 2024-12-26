@@ -1,4 +1,5 @@
 import { InboxIcon, TrashIcon, UsersIcon } from '@heroicons/react/24/outline'
+
 import Banner from './_components/banner'
 
 const features = [
@@ -32,25 +33,25 @@ export default function HomePage() {
       <div>
         <div className="carousel rounded-box">
           <div className="carousel-item">
-            <img src="/007.jpg" alt="Burger" className="w-80" />
+            <img className="w-80" src="/007.jpg" alt="Burger" />
           </div>
           <div className="carousel-item">
-            <img src="/351.jpg" alt="Burger" className="w-80" />
+            <img className="w-80" src="/351.jpg" alt="Burger" />
           </div>
           <div className="carousel-item">
-            <img src="/350.jpg" alt="Burger" className="w-80" />
+            <img className="w-80" src="/350.jpg" alt="Burger" />
           </div>
           <div className="carousel-item">
-            <img src="/349.jpg" alt="Burger" className="w-80" />
+            <img className="w-80" src="/349.jpg" alt="Burger" />
           </div>
           <div className="carousel-item">
-            <img src="/348.jpg" alt="Burger" className="w-80" />
+            <img className="w-80" src="/348.jpg" alt="Burger" />
           </div>
           <div className="carousel-item">
-            <img src="/347.jpg" alt="Burger" className="w-80" />
+            <img className="w-80" src="/347.jpg" alt="Burger" />
           </div>
           <div className="carousel-item">
-            <img src="/346.jpg" alt="Burger" className="w-80" />
+            <img className="w-80" src="/346.jpg" alt="Burger" />
           </div>
         </div>
       </div>
@@ -62,24 +63,24 @@ export default function HomePage() {
               Stay on top of customer support
             </h2>
             <p className="mt-6 text-lg/8 text-gray-600">
-              Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in
-              accusamus quisquam.
+              Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum
+              cupiditate veritatis in accusamus quisquam.
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
               {features.map((feature) => (
-                <div key={feature.name} className="flex flex-col">
+                <div className="flex flex-col" key={feature.name}>
                   <dt className="text-base/7 font-semibold text-gray-900">
                     <div className="mb-6 flex size-10 items-center justify-center rounded-lg bg-indigo-600">
-                      <feature.icon aria-hidden="true" className="size-6 text-white" />
+                      <feature.icon className="size-6 text-white" aria-hidden="true" />
                     </div>
                     {feature.name}
                   </dt>
                   <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
                     <p className="flex-auto">{feature.description}</p>
                     <p className="mt-6">
-                      <a href={feature.href} className="text-sm/6 font-semibold text-indigo-600">
+                      <a className="text-sm/6 font-semibold text-indigo-600" href={feature.href}>
                         Learn more <span aria-hidden="true">→</span>
                       </a>
                     </p>
@@ -91,27 +92,29 @@ export default function HomePage() {
         </div>
       </div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <ul role="list" className="grid grid-cols-2 gap-x-4 gap-y-8 lg:grid-cols-3 xl:gap-x-8">
-          {['/007.jpg', '/345.jpg', '/346.jpg', '/347.jpg', '/348.jpg', '/349.jpg'].map((path, index) => (
-            <li key={index} className="">
-              <div className="card w-96 bg-base-100 shadow-xl">
-                <figure>
-                  <img src={path} alt="Glass" className="scale-125" />
-                </figure>
-                <div className="card-body">
-                  <h2 className="card-title">
-                    Glass!
-                    <div className="badge badge-secondary">NEW</div>
-                  </h2>
-                  {/* <p>If a dog chews shoes whose shoes does he choose?</p> */}
-                  <div className="card-actions justify-end">
-                    <div className="badge badge-outline">Fashion</div>
-                    <div className="badge badge-outline">Products</div>
+        <ul className="grid grid-cols-2 gap-x-4 gap-y-8 lg:grid-cols-3 xl:gap-x-8" role="list">
+          {['/007.jpg', '/345.jpg', '/346.jpg', '/347.jpg', '/348.jpg', '/349.jpg'].map(
+            (path, index) => (
+              <li className="" key={index}>
+                <div className="card w-96 bg-base-100 shadow-xl">
+                  <figure>
+                    <img className="scale-125" src={path} alt="Glass" />
+                  </figure>
+                  <div className="card-body">
+                    <h2 className="card-title">
+                      Glass!
+                      <div className="badge badge-secondary">NEW</div>
+                    </h2>
+                    {/* <p>If a dog chews shoes whose shoes does he choose?</p> */}
+                    <div className="card-actions justify-end">
+                      <div className="badge badge-outline">Fashion</div>
+                      <div className="badge badge-outline">Products</div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </li>
-          ))}
+              </li>
+            ),
+          )}
         </ul>
       </div>
       {/* Contact */}
@@ -120,7 +123,9 @@ export default function HomePage() {
           <div className="mx-auto max-w-2xl space-y-16 divide-y divide-gray-100 lg:mx-0 lg:max-w-none">
             <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
               <div>
-                <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900">Get in touch</h2>
+                <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900">
+                  Get in touch
+                </h2>
                 <p className="mt-4 text-base/7 text-gray-600">
                   Quam nunc nunc eu sed. Sed rhoncus quis ultricies ac pellentesque.
                 </p>
@@ -132,7 +137,10 @@ export default function HomePage() {
                     <div>
                       <dt className="sr-only">Email</dt>
                       <dd>
-                        <a href="mailto:collaborate@example.com" className="font-semibold text-indigo-600">
+                        <a
+                          className="font-semibold text-indigo-600"
+                          href="mailto:collaborate@example.com"
+                        >
                           collaborate@example.com
                         </a>
                       </dd>
@@ -149,7 +157,10 @@ export default function HomePage() {
                     <div>
                       <dt className="sr-only">Email</dt>
                       <dd>
-                        <a href="mailto:press@example.com" className="font-semibold text-indigo-600">
+                        <a
+                          className="font-semibold text-indigo-600"
+                          href="mailto:press@example.com"
+                        >
                           press@example.com
                         </a>
                       </dd>
@@ -166,7 +177,10 @@ export default function HomePage() {
                     <div>
                       <dt className="sr-only">Email</dt>
                       <dd>
-                        <a href="mailto:careers@example.com" className="font-semibold text-indigo-600">
+                        <a
+                          className="font-semibold text-indigo-600"
+                          href="mailto:careers@example.com"
+                        >
                           careers@example.com
                         </a>
                       </dd>
@@ -183,7 +197,10 @@ export default function HomePage() {
                     <div>
                       <dt className="sr-only">Email</dt>
                       <dd>
-                        <a href="mailto:hello@example.com" className="font-semibold text-indigo-600">
+                        <a
+                          className="font-semibold text-indigo-600"
+                          href="mailto:hello@example.com"
+                        >
                           hello@example.com
                         </a>
                       </dd>
@@ -198,7 +215,9 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-1 gap-10 pt-16 lg:grid-cols-3">
               <div>
-                <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900">Locations</h2>
+                <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900">
+                  Locations
+                </h2>
                 <p className="mt-4 text-base/7 text-gray-600">
                   Consequat sunt cillum cillum elit sint. Qui occaecat nisi in ipsum commodo.
                 </p>

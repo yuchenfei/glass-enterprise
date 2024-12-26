@@ -11,14 +11,14 @@ export default function Banner() {
     <div>
       <div className="carousel w-full">
         {banners.map((banner) => (
-          <div id={`banner-${banner.index}`} className="carousel-item w-full">
-            <img src={banner.src} key={banner.index} className="w-full" />
+          <div id={`banner-${banner.index}`} className="carousel-item w-full" key={banner.index}>
+            <img className="w-full" src={banner.src} key={banner.index} />
           </div>
         ))}
       </div>
       <div className="flex w-full justify-center gap-2 py-2">
         {banners.map((banner) => (
-          <a href={`#banner-${banner.index}`} key={banner.index} className="btn btn-xs">
+          <a className="btn btn-xs" href={`#banner-${banner.index}`} key={banner.index}>
             {banner.index}
           </a>
         ))}
