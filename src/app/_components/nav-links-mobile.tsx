@@ -53,6 +53,7 @@ const callsToAction = [
   { name: 'Contact sales', href: '#', icon: PhoneIcon },
   { name: 'View all products', href: '#', icon: RectangleGroupIcon },
 ]
+import Link from 'next/link'
 import React from 'react'
 
 interface NavLinksMobileProps {
@@ -79,6 +80,12 @@ const NavLinksMobile: React.FC<NavLinksMobileProps> = ({ mobileMenuOpen, setMobi
         <div className="mt-6 flow-root">
           <div className="-my-6 divide-y divide-gray-500/10">
             <div className="space-y-2 py-6">
+              <Link
+                className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                href="/"
+              >
+                Home
+              </Link>
               <Disclosure className="-mx-3" as="div">
                 <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
                   Product
@@ -100,33 +107,21 @@ const NavLinksMobile: React.FC<NavLinksMobileProps> = ({ mobileMenuOpen, setMobi
                   ))}
                 </DisclosurePanel>
               </Disclosure>
-              <a
+              <Link
                 className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                href="#"
+                href="/about"
               >
-                Features
-              </a>
-              <a
-                className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                href="#"
-              >
-                Marketplace
-              </a>
-              <a
-                className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                href="#"
-              >
-                Company
-              </a>
+                About
+              </Link>
             </div>
-            <div className="py-6">
-              <a
-                className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                href="#"
-              >
-                Log in
-              </a>
-            </div>
+            {/* <div className="py-6"> */}
+            {/*   <a */}
+            {/*     className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" */}
+            {/*     href="#" */}
+            {/*   > */}
+            {/*     Log in */}
+            {/*   </a> */}
+            {/* </div> */}
           </div>
         </div>
       </DialogPanel>

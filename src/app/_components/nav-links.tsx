@@ -11,6 +11,7 @@ import {
   FingerPrintIcon,
   SquaresPlusIcon,
 } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 
 const products = [
   {
@@ -48,6 +49,10 @@ const callsToAction = [
 export default function NavLinks() {
   return (
     <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+      <Link className="text-sm/6 font-semibold text-gray-900" href="/">
+        Home
+      </Link>
+
       <Popover>
         <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900">
           Product
@@ -97,15 +102,9 @@ export default function NavLinks() {
         </PopoverPanel>
       </Popover>
 
-      <a className="text-sm/6 font-semibold text-gray-900" href="#">
-        Features
-      </a>
-      <a className="text-sm/6 font-semibold text-gray-900" href="#">
-        Marketplace
-      </a>
-      <a className="text-sm/6 font-semibold text-gray-900" href="#">
-        Company
-      </a>
+      <Link className="text-sm/6 font-semibold text-gray-900" href="/about">
+        About
+      </Link>
     </PopoverGroup>
   )
 }
