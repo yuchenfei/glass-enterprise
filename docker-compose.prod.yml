@@ -7,15 +7,15 @@ services:
       dockerfile: Dockerfile
     restart: always
     ports:
-      - "3000:3000"
+      - '3000:3000'
     environment:
       - NODE_ENV=production
-    # 如果需要环境变量文件
-    # env_file:
-    #   - .env.production
+    env_file:
+      - .env.production
     # 如果需要限制资源
     # deploy:
     #   resources:
     #     limits:
     #       cpus: '1'
     #       memory: 1G
+
