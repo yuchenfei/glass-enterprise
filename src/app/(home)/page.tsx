@@ -1,3 +1,4 @@
+import { getProducts } from '@/lib/strapi'
 import { InboxIcon, TrashIcon, UsersIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 
@@ -27,7 +28,11 @@ const features = [
   },
 ]
 
-export default function HomePage() {
+export default async function HomePage() {
+  const products = await getProducts()
+
+  console.log('Products:', products)
+
   return (
     <div>
       <Banner />
@@ -92,32 +97,41 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+      {/* 产品展示部分 */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <ul className="grid grid-cols-2 gap-x-4 gap-y-8 lg:grid-cols-3 xl:gap-x-8" role="list">
-          {['/007.jpg', '/345.jpg', '/346.jpg', '/347.jpg', '/348.jpg', '/349.jpg'].map(
-            (path, index) => (
-              <li className="" key={index}>
-                <div className="card w-96 bg-base-100 shadow-xl">
-                  <figure>
-                    <Image className="scale-125" src={path} alt="Glass" height={500} width={500} />
-                  </figure>
-                  <div className="card-body">
-                    <h2 className="card-title">
-                      Glass!
-                      <div className="badge badge-secondary">NEW</div>
-                    </h2>
-                    {/* <p>If a dog chews shoes whose shoes does he choose?</p> */}
-                    <div className="card-actions justify-end">
-                      <div className="badge badge-outline">Fashion</div>
-                      <div className="badge badge-outline">Products</div>
-                    </div>
+          {products.map((product) => (
+            <li className="" key={product.id}>
+              <div className="card w-96 bg-base-100 shadow-xl">
+                <figure>
+                  <Image
+                    className="scale-125"
+                    src={product.image}
+                    alt={product.name}
+                    height={500}
+                    width={500}
+                  />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title">
+                    {product.name}
+                    {product.isNew && <div className="badge badge-secondary">NEW</div>}
+                  </h2>
+                  <p>{product.description}</p>
+                  <div className="card-actions justify-end">
+                    {product.categories.map((category) => (
+                      <div className="badge badge-outline" key={category}>
+                        {category}
+                      </div>
+                    ))}
                   </div>
                 </div>
-              </li>
-            ),
-          )}
+              </div>
+            </li>
+          ))}
         </ul>
       </div>
+
       {/* Contact */}
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

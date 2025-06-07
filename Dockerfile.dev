@@ -16,6 +16,8 @@ RUN pnpm install
 # 复制其余源代码
 COPY . .
 
+ENV STRAPI_URL=http://host.docker.internal:1337
+
 # 暴露端口
 EXPOSE 3000
 
